@@ -1,0 +1,12 @@
+*~
+*.pyc
+
+# Generated with `make dist`
+dist/
+MANIFEST
+
+.tox/
+.environment
+
+# Sphinx
+docs/_build/

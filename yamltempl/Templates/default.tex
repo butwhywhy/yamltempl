@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\MakeOuterQuote{"}
+%\renewcommand{\labelitemiii}{$\cdot$}
+
+##parse( "/home/guiller/work/yamltempl/yamltempl/Templates/latex.vm" )
+#parse( "latex.vm" )
+
+\setlistdepth{9}
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=--}
+\setlist[itemize,3]{label=$\cdot$}
+\setlist[itemize,4]{label=-}
+\setlist[itemize,5]{label=$\cdot$}
+\setlist[itemize,6]{label=$\cdot$}
+\setlist[itemize,7]{label=$\cdot$}
+\setlist[itemize,8]{label=$\cdot$}
+\setlist[itemize,9]{label=$\cdot$}
+\renewlist{itemize}{itemize}{9}
+
+\begin{document}
+
+
+#itemize( $data )
+
+\end{document}

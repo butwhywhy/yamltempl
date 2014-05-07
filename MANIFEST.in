@@ -1,0 +1,8 @@
+# MANIFEST.in
+include *.rst
+include *.txt
+include Makefile
+recursive-include docs *
+recursive-include examples *
+recursive-include tests *
+

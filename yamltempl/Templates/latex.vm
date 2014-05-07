@@ -1,0 +1,31 @@
+#macro( toLaTeX $str )$!{python.clean_final_new_line($!str)}#end
+
+#macro( itemize $collection ) ##
+#if( ${python.islist($collection)} ) ##
+#if( ${python.len($collection)} > 1 ) ##
+\begin{itemize}
+#foreach( $item in $collection ) ## 
+\item #itemize( $item ) ##
+#end ##
+\end{itemize} 
+#else ##
+#itemize( $collection[0] ) ##
+#end ##
+#elseif(${python.isdict($collection)} ) ##
+#if( ${python.len($collection)} > 1 ) ##
+\begin{itemize} 
+#foreach( $key in $collection.keys() ) ##
+\item ${key.capitalize()}: ##
+#itemize( $collection.get($key) ) ##
+#end ##
+\end{itemize} 
+#else ##
+#foreach( $key in $collection.keys() ) ##
+${key.capitalize()}: ##
+#itemize( $collection.get($key) ) ##
+#end ##
+#end ##
+#else ##
+#toLaTeX( $collection ) 
+#end ##
+#end ##
