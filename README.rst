@@ -26,15 +26,15 @@ Usage
 The script ``yaml_templates_command.py`` provides a command line interface.
 The following command would combine the data given in yaml format in the 
 ``data.yaml`` file with the VTL template file ``templ.html`` to provide
-the result in ``data.html``.::
+the result in ``data.html``. ::
 
     ./yaml_templates_command.py --template templ.html --output data.html data.yaml
 
-For help on the command line utility usage:::
+For help on the command line utility usage::
 
     ./yaml_templates_command.py --help
 
-The following code shows the use within python:::
+The following code shows the use within python ::
 
     >>> from yamltempl import yamlutils, vtl
     >>> yaml_text = """
