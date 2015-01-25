@@ -17,7 +17,7 @@ The typical installation methods for python packages should work:
 
         python setup.py install
 
-* Using ``pip``:::
+* Using ``pip``::
 
     pip install -U yamltempl
 
